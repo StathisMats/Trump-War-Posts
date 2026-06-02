@@ -1,147 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donald J. Trump (@realDonaldTrump) - Truth Social Tracker</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { background-color: #000000; color: #ffffff; }
-        .ts-border { border-color: #2f3336; }
-        .ts-text-muted { color: #71767b; }
-        .ts-bg-hover:hover { background-color: rgba(255, 255, 255, 0.03); }
-        .ts-cyan { color: #2FEECC; }
-    </style>
+    <title>POTUS SQUAWK // TRUTH FEED</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="font-sans antialiased min-h-screen flex justify-center">
-
-    <main class="w-full max-w-[600px] border-x ts-border min-h-screen relative">
-        
-        <header class="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b ts-border px-4 py-3 flex items-center space-x-6 cursor-pointer">
-            <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="currentColor"><path d="M7.414 13l5.043 5.04-1.414 1.42L3.586 12l7.457-7.46 1.414 1.42L7.414 11H21v2H7.414z"></path></svg>
-            <div>
-                <h1 class="text-xl font-bold flex items-center space-x-1">
-                    <span>Donald J. Trump</span>
-                    <svg class="w-4 h-4 text-red-500" viewBox="0 0 20 20" fill="currentColor"><path d="M8.82.521a1.596 1.596 0 012.36 0l.362.398c.42.46 1.07.635 1.664.445l.512-.163a1.596 1.596 0 012.043 1.18l.115.525a1.596 1.596 0 001.218 1.218l.525.115a1.596 1.596 0 011.18 2.043l-.163.513a1.596 1.596 0 00.446 1.663l.397.362a1.596 1.596 0 010 2.36l-.397.362c-.461.42-.635 1.07-.446 1.664l.163.512a1.596 1.596 0 01-1.18 2.043l-.525.115a1.596 1.596 0 00-1.218 1.218l-.115.525a1.596 1.596 0 01-2.043 1.18l-.512-.163a1.596 1.596 0 00-1.664.445l-.362.398a1.596 1.596 0 01-2.36 0l-.362-.398a1.596 1.596 0 00-1.663-.445l-.513.163a1.596 1.596 0 01-2.043-1.18l-.115-.525a1.596 1.596 0 00-1.218-1.218l-.525-.115a1.596 1.596 0 01-1.18-2.043l.164-.512a1.596 1.596 0 00-.446-1.664L.52 11.18a1.596 1.596 0 010-2.36l.398-.362c.46-.42.635-1.07.446-1.663L1.2 6.282a1.596 1.596 0 011.18-2.043l.525-.115a1.596 1.596 0 001.218-1.218l.115-.525A1.596 1.596 0 016.282 1.2l.513.163c.594.19 1.244.015 1.663-.445L8.821.52z"></path><path d="M6.66 7.464L5.012 9.111l3.85 3.85 5.483-5.481-1.966-1.966L8.544 9.35 6.66 7.464z" fill="#fff"></path></svg>
-                </h1>
-                <p class="text-xs ts-text-muted">Filtered Iran War Archive</p>
+<body>
+    <div class="terminal-container">
+        <header class="status-bar">
+            <div class="status-left">
+                <span class="live-indicator"></span>
+                <span class="system-title">US PRES DESK // TERMINAL V1.0</span>
+            </div>
+            <div class="status-right">
+                <span id="system-clock">--:--:--</span>
+                <span class="connection-status">CONNECTED</span>
             </div>
         </header>
 
-        <div class="relative">
-            <div class="h-32 md:h-48 bg-gray-800 bg-[url('https://static-assets-1.truthsocial.com/tmtg:prime-ts-assets/accounts/headers/107/780/257/626/128/497/original/34bcad0550be0e58.jpeg')] bg-cover bg-center"></div>
-            
-            <div class="px-4 pb-4">
-                <div class="relative -mt-12 md:-mt-16 mb-3">
-                    <img src="https://static-assets-1.truthsocial.com/tmtg:prime-ts-assets/accounts/avatars/107/780/257/626/128/497/original/454286ac07a6f6e6.jpeg" alt="Donald J. Trump" class="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-black object-cover">
-                </div>
-
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h2 class="text-xl font-extrabold flex items-center space-x-1">
-                            <span>Donald J. Trump</span>
-                            <svg class="w-5 h-5 text-red-500" viewBox="0 0 20 20" fill="currentColor"><path d="M8.82.521a1.596 1.596 0 012.36 0l.362.398c.42.46 1.07.635 1.664.445l.512-.163a1.596 1.596 0 012.043 1.18l.115.525a1.596 1.596 0 001.218 1.218l.525.115a1.596 1.596 0 011.18 2.043l-.163.513a1.596 1.596 0 00.446 1.663l.397.362a1.596 1.596 0 010 2.36l-.397.362c-.461.42-.635 1.07-.446 1.664l.163.512a1.596 1.596 0 01-1.18 2.043l-.525.115a1.596 1.596 0 00-1.218 1.218l-.115.525a1.596 1.596 0 01-2.043 1.18l-.512-.163a1.596 1.596 0 00-1.664.445l-.362.398a1.596 1.596 0 01-2.36 0l-.362-.398a1.596 1.596 0 00-1.663-.445l-.513.163a1.596 1.596 0 01-2.043-1.18l-.115-.525a1.596 1.596 0 00-1.218-1.218l-.525-.115a1.596 1.596 0 01-1.18-2.043l.164-.512a1.596 1.596 0 00-.446-1.664L.52 11.18a1.596 1.596 0 010-2.36l.398-.362c.46-.42.635-1.07.446-1.663L1.2 6.282a1.596 1.596 0 011.18-2.043l.525-.115a1.596 1.596 0 001.218-1.218l.115-.525A1.596 1.596 0 016.282 1.2l.513.163c.594.19 1.244.015 1.663-.445L8.821.52z"></path><path d="M6.66 7.464L5.012 9.111l3.85 3.85 5.483-5.481-1.966-1.966L8.544 9.35 6.66 7.464z" fill="#fff"></path></svg>
-                        </h2>
-                        <p class="text-[15px] ts-text-muted mt-0.5">@realDonaldTrump</p>
-                    </div>
-                </div>
-                
-                <div class="mt-4 text-[15px] leading-snug">
-                    <p>45th President of the United States of America</p>
-                </div>
-            </div>
-            
-            <div class="flex w-full border-b ts-border text-[15px] font-bold">
-                <div class="flex-1 text-center py-4 ts-bg-hover cursor-pointer relative text-white">
-                    Truths
-                    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-white rounded-full"></div>
-                </div>
-                <div class="flex-1 text-center py-4 ts-text-muted ts-bg-hover cursor-pointer">Truths & Replies</div>
-                <div class="flex-1 text-center py-4 ts-text-muted ts-bg-hover cursor-pointer">Media</div>
-            </div>
+        <div class="feed-header">
+            <div class="col-time">TIME (EST)</div>
+            <div class="col-source">SOURCE</div>
+            <div class="col-text">STATEMENT / TRANSMISSION</div>
+            <div class="col-impact">ENGAGEMENT</div>
         </div>
 
-        <div id="truth-feed">
-            <div class="py-10 text-center ts-text-muted text-sm">Loading Truths...</div>
-        </div>
+        <main id="feed-body" class="feed-body">
+            <div class="loading">AWAITING DATALINK...</div>
+        </main>
+    </div>
 
-    </main>
-
-    <script>
-        // The Truth Social Post Template
-        function createPostHTML(post) {
-            return `
-            <article class="p-4 border-b ts-border ts-bg-hover cursor-pointer transition-colors duration-200">
-                <div class="flex space-x-3">
-                    <div class="flex-shrink-0">
-                        <img src="https://static-assets-1.truthsocial.com/tmtg:prime-ts-assets/accounts/avatars/107/780/257/626/128/497/original/454286ac07a6f6e6.jpeg" class="w-10 h-10 rounded-full object-cover">
-                    </div>
-                    
-                    <div class="flex-1 min-w-0">
-                        <div class="flex justify-between items-start">
-                            <div class="flex items-center space-x-1 truncate">
-                                <p class="font-bold text-[15px] text-white truncate">Donald J. Trump</p>
-                                <svg class="w-[14px] h-[14px] text-red-500 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path d="M8.82.521a1.596 1.596 0 012.36 0l.362.398c.42.46 1.07.635 1.664.445l.512-.163a1.596 1.596 0 012.043 1.18l.115.525a1.596 1.596 0 001.218 1.218l.525.115a1.596 1.596 0 011.18 2.043l-.163.513a1.596 1.596 0 00.446 1.663l.397.362a1.596 1.596 0 010 2.36l-.397.362c-.461.42-.635 1.07-.446 1.664l.163.512a1.596 1.596 0 01-1.18 2.043l-.525.115a1.596 1.596 0 00-1.218 1.218l-.115.525a1.596 1.596 0 01-2.043 1.18l-.512-.163a1.596 1.596 0 00-1.664.445l-.362.398a1.596 1.596 0 01-2.36 0l-.362-.398a1.596 1.596 0 00-1.663-.445l-.513.163a1.596 1.596 0 01-2.043-1.18l-.115-.525a1.596 1.596 0 00-1.218-1.218l-.525-.115a1.596 1.596 0 01-1.18-2.043l.164-.512a1.596 1.596 0 00-.446-1.664L.52 11.18a1.596 1.596 0 010-2.36l.398-.362c.46-.42.635-1.07.446-1.663L1.2 6.282a1.596 1.596 0 011.18-2.043l.525-.115a1.596 1.596 0 001.218-1.218l.115-.525A1.596 1.596 0 016.282 1.2l.513.163c.594.19 1.244.015 1.663-.445L8.821.52z"></path><path d="M6.66 7.464L5.012 9.111l3.85 3.85 5.483-5.481-1.966-1.966L8.544 9.35 6.66 7.464z" fill="#fff"></path></svg>
-                                <span class="ts-text-muted text-[15px] ml-1 truncate">@realDonaldTrump</span>
-                                <span class="ts-text-muted text-[15px]">·</span>
-                                <span class="ts-text-muted text-[15px] whitespace-nowrap">${post.time}</span>
-                            </div>
-                        </div>
-
-                        <div class="mt-1 text-[15px] leading-snug whitespace-pre-wrap break-words">${post.text}</div>
-
-                        <div class="flex justify-between items-center mt-3 text-gray-500 max-w-md">
-                            <div class="flex items-center space-x-2 hover:text-blue-400 group">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
-                                <span class="text-xs">1.5k</span>
-                            </div>
-                            <div class="flex items-center space-x-2 hover:text-[#2FEECC] group">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
-                                <span class="text-xs">${post.retruths}</span>
-                            </div>
-                            <div class="flex items-center space-x-2 hover:text-pink-500 group">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-                                <span class="text-xs">${post.likes}</span>
-                            </div>
-                            <div class="flex items-center space-x-2 hover:text-blue-400 group">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            `;
-        }
-
-        // Fetch the data.json file and render it
-        async function loadFeed() {
-            const feedContainer = document.getElementById('truth-feed');
-            try {
-                // In production (GitHub Pages), this fetches your data.json file
-                const response = await fetch('data.json');
-                
-                if (!response.ok) throw new Error("Could not find data.json");
-                
-                const posts = await response.json();
-                feedContainer.innerHTML = ''; // Clear loading text
-                
-                posts.forEach(post => {
-                    feedContainer.innerHTML += createPostHTML(post);
-                });
-
-            } catch (error) {
-                // Fallback UI if they open the file locally without a server
-                feedContainer.innerHTML = `
-                    <div class="p-8 text-center">
-                        <p class="text-red-400 mb-2">Error loading data.json</p>
-                        <p class="ts-text-muted text-sm">If you are viewing this locally on your computer, your browser is blocking the file fetch. Upload both files to GitHub Pages to see it work!</p>
-                    </div>
-                `;
-            }
-        }
-
-        // Run the function when the page loads
-        loadFeed();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
