@@ -19,6 +19,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Updated Container to span the full width of the browser */
 .terminal-container {
     width: 100%;
     margin: 0;
@@ -63,10 +64,10 @@ body {
     color: var(--accent-green);
 }
 
-/* Grid Layout for the Feed (Updated for wider date/time column) */
+/* Grid Layout for the Feed */
 .feed-header, .feed-row {
     display: grid;
-    grid-template-columns: 180px 90px 100px 1fr;
+    grid-template-columns: 130px 100px 1fr;
     gap: 1.5rem;
     padding: 1rem;
     border-bottom: 1px solid var(--border-color);
@@ -83,9 +84,9 @@ body {
     top: 0;
 }
 
+/* Forces header columns to inherit header styling, keeping STATEMENT looking correct */
 .feed-header .col-date,
 .feed-header .col-time,
-.feed-header .col-lapsed,
 .feed-header .col-source,
 .feed-header .col-text {
     color: inherit;
@@ -103,16 +104,11 @@ body {
     background-color: #0f0f0f;
 }
 
-.col-date, .col-time, .col-lapsed {
+.col-date, .col-time {
     font-family: var(--font-mono);
     color: var(--text-muted);
     font-size: 0.85rem;
     white-space: nowrap;
-}
-
-/* Lapsed time gets a subtle emphasis */
-.col-lapsed {
-    color: #9ca3af; 
 }
 
 .col-source .badge {
@@ -133,40 +129,10 @@ body {
     color: #ffffff;
 }
 
+/* Highlight uppercase keywords */
 .col-text b {
     color: var(--accent-orange);
     font-weight: 600;
-}
-
-/* Summary Toggle Styling */
-.summary-container {
-    margin-top: 1rem;
-}
-
-.summary-toggle {
-    background: transparent;
-    border: none;
-    color: var(--accent-blue);
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    cursor: pointer;
-    padding: 0;
-    transition: color 0.15s ease;
-}
-
-.summary-toggle:hover {
-    color: #60a5fa;
-    text-decoration: underline;
-}
-
-.summary-content {
-    margin-top: 0.5rem;
-    padding: 0.75rem 1rem;
-    background-color: rgba(59, 130, 246, 0.05);
-    border-left: 2px solid var(--accent-blue);
-    font-size: 0.9rem;
-    color: #cbd5e1;
-    border-radius: 0 4px 4px 0;
 }
 
 .loading {
@@ -196,10 +162,8 @@ body {
         grid-template-columns: 1fr;
         gap: 0.5rem;
     }
-    .col-date, .col-time, .col-lapsed { 
+    .col-date, .col-time { 
         font-size: 0.75rem; 
         color: var(--accent-orange); 
-        display: inline-block;
-        margin-right: 1rem;
     }
 }
