@@ -63,7 +63,8 @@ body {
 /* Grid Layout for the Feed */
 .feed-header, .feed-row {
     display: grid;
-    grid-template-columns: 100px 100px 1fr 120px;
+    /* Updated to 3 columns, slightly widened the time column for the "GMT" text */
+    grid-template-columns: 120px 100px 1fr;
     gap: 1.5rem;
     padding: 1rem;
     border-bottom: 1px solid var(--border-color);
@@ -114,20 +115,10 @@ body {
     color: #ffffff;
 }
 
-/* Highlight uppercase keywords (often used for emphasis by POTUS) */
+/* Highlight uppercase keywords */
 .col-text b {
     color: var(--accent-orange);
     font-weight: normal;
-}
-
-.col-impact {
-    font-family: var(--font-mono);
-    color: var(--text-muted);
-    font-size: 0.75rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    text-align: right;
 }
 
 .loading {
@@ -158,5 +149,4 @@ body {
         gap: 0.5rem;
     }
     .col-time { font-size: 0.75rem; color: var(--accent-orange); }
-    .col-impact { flex-direction: row; justify-content: flex-start; gap: 1rem; text-align: left; mt-2; }
 }
