@@ -19,11 +19,12 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Updated Container to span the full width of the browser */
 .terminal-container {
-    width: 100%;
-    margin: 0;
+    max-w-[1200px];
+    margin: 0 auto;
     min-height: 100vh;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
 }
 
 /* Status Bar */
@@ -46,11 +47,6 @@ body {
     gap: 1rem;
 }
 
-.logo {
-    height: 20px;
-    width: auto;
-}
-
 .live-indicator {
     width: 8px;
     height: 8px;
@@ -67,7 +63,8 @@ body {
 /* Grid Layout for the Feed */
 .feed-header, .feed-row {
     display: grid;
-    grid-template-columns: 130px 100px 1fr;
+    /* Updated to 3 columns, slightly widened the time column for the "GMT" text */
+    grid-template-columns: 120px 100px 1fr;
     gap: 1.5rem;
     padding: 1rem;
     border-bottom: 1px solid var(--border-color);
@@ -84,17 +81,6 @@ body {
     top: 0;
 }
 
-/* Forces header columns to inherit header styling, keeping STATEMENT looking correct */
-.feed-header .col-date,
-.feed-header .col-time,
-.feed-header .col-source,
-.feed-header .col-text {
-    color: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-}
-
 /* Feed Rows */
 .feed-row {
     transition: background-color 0.15s ease;
@@ -104,12 +90,20 @@ body {
     background-color: #0f0f0f;
 }
 
-.col-date, .col-time {
+.col-time {
     font-family: var(--font-mono);
     color: var(--text-muted);
     font-size: 0.85rem;
     white-space: nowrap;
 }
+
+
+
+
+
+
+
+
 
 .col-source .badge {
     display: inline-block;
@@ -132,7 +126,7 @@ body {
 /* Highlight uppercase keywords */
 .col-text b {
     color: var(--accent-orange);
-    font-weight: 600;
+    font-weight: normal;
 }
 
 .loading {
@@ -162,8 +156,5 @@ body {
         grid-template-columns: 1fr;
         gap: 0.5rem;
     }
-    .col-date, .col-time { 
-        font-size: 0.75rem; 
-        color: var(--accent-orange); 
-    }
+    .col-time { font-size: 0.75rem; color: var(--accent-orange); }
 }
